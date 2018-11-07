@@ -197,6 +197,8 @@ def minimize(automata):
         for letter in state.next.keys():
             state.next[letter] = {get_id(classes[state.get_next(letter)])}
         min_auto.state[get_id(i)] = state
+
+    print(classes)
     return min_auto
 
 
@@ -241,7 +243,14 @@ def equiv(auto1, auto2):
 if __name__ == '__main__':
     # example of backup and restore
     # input_and_save()
-    # my_auto = load_and_get()
+    my_auto = load_and_get()
 
-    my_auto = input_automata()
+    edge_count = int(input('Input edge count: '))
+    for i in range(edge_count):
+        edge = input('Input edge <from> <letter> <to>: ').split()
+        v_from, letter, v_to = edge
+        my_auto.state[get_id(v_from)].next[letter].add(get_id(v_to))
+    my_auto.print()
+
+    # my_auto = input_automata()
     minimize(my_auto).print()

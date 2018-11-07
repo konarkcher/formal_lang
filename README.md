@@ -2,7 +2,7 @@
 
 ## Automata library
 
-[automata.py](automata.py)
+[minimize.py](minimize/minimize.py)
 
 ### Features:
 
@@ -77,3 +77,9 @@ a -> {frozenset({'4'})}
 b -> {frozenset({'6'})}
 --------------------------------------------------------------------------------
 ```
+
+## Regex parsing
+
+[shortest_path.py](shortest_word/shortest_word.py)
+
+[Explanation](shortest_word/explanation.pdf)
