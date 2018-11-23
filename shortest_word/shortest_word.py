@@ -95,7 +95,6 @@ class LanguageInfo:
                 self.only_letter = new_only
                 break
             prev_only = new_only
-            new_only = set()
 
         for xlen, l1 in list(self.ends_with_letter.items()):
             for l2 in self.only_letter:
