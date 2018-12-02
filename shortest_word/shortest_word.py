@@ -94,7 +94,7 @@ class LanguageInfo:
             if prev_only == new_only:
                 self.only_letter = new_only
                 break
-            prev_only = new_only
+            prev_only = new_only.copy()
 
         for xlen, l1 in list(self.ends_with_letter.items()):
             for l2 in self.only_letter:
